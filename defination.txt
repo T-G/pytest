@@ -1,0 +1,35 @@
+How to work with PyTest Fixtures
+
+The purpose of test fixtures is to provide a fixed baseline upon which tests can reliably
+and repeatedly execute.
+
+@pytest.fixture()
+- Executes specific method before every test method
+
+@pytest.yield_fixture()
+- Execute specific method before and after every test method
+
+----------------------------------
+MULTIPLE WAYS TO RUN TEST CASE
+----------------------------------
+py.test test_mod.py # run test in module
+
+py.test somepath # run all tests below somepath
+
+py.test test_module.py::test_method # only run test_method in test_module
+
+-s to print statement
+-v verbose
+
+---------------
+COMMANDS
+---------------
++ Run all tests in a module/file
+pytest -v -s test_Login.py
+pytest -v -s test_SignUp.py
+
++ Run all tests (from all module) in a path
+pytest -v -s c:\User\admin\PycharmProjects\SeleniumWithPython\myPack\
+
++ Run specific test method from a module
+pytest -v -s test_Login.py::test_loginbyFacebook.py
